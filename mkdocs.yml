@@ -1,5 +1,7 @@
 site_name: DipCoin Python Docs
-
+repo_name: dipcoinlab/dipcoin-python-client
+repo_url: https://github.com/dipcoinlab/dipcoin-python-client
+edit_uri: https://github.com/dipcoinlab/dipcoin-python-client/tree/main/docs
 theme:
   name: "material"
   features:
