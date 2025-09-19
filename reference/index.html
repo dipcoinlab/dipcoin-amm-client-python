@@ -185,6 +185,18 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/dipcoinlab/dipcoin-python-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dipcoinlab/dipcoin-python-client
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -288,6 +300,18 @@
     </a>
     DipCoin Python Docs
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dipcoinlab/dipcoin-python-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dipcoinlab/dipcoin-python-client
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -710,6 +734,9 @@
                   
 
 
+  
+  
+
 
   <h1>Reference</h1>
 
@@ -801,19 +828,7 @@ including adding/removing liquidity and performing swaps.</p>
 
               <details class="quote">
                 <summary>Source code in <code>dipcoin/client.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 16</span>
-<span class="normal"> 17</span>
-<span class="normal"> 18</span>
-<span class="normal"> 19</span>
-<span class="normal"> 20</span>
-<span class="normal"> 21</span>
-<span class="normal"> 22</span>
-<span class="normal"> 23</span>
-<span class="normal"> 24</span>
-<span class="normal"> 25</span>
-<span class="normal"> 26</span>
-<span class="normal"> 27</span>
-<span class="normal"> 28</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 28</span>
 <span class="normal"> 29</span>
 <span class="normal"> 30</span>
 <span class="normal"> 31</span>
@@ -1320,7 +1335,47 @@ including adding/removing liquidity and performing swaps.</p>
 <span class="normal">532</span>
 <span class="normal">533</span>
 <span class="normal">534</span>
-<span class="normal">535</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">DipcoinClient</span><span class="p">:</span>
+<span class="normal">535</span>
+<span class="normal">536</span>
+<span class="normal">537</span>
+<span class="normal">538</span>
+<span class="normal">539</span>
+<span class="normal">540</span>
+<span class="normal">541</span>
+<span class="normal">542</span>
+<span class="normal">543</span>
+<span class="normal">544</span>
+<span class="normal">545</span>
+<span class="normal">546</span>
+<span class="normal">547</span>
+<span class="normal">548</span>
+<span class="normal">549</span>
+<span class="normal">550</span>
+<span class="normal">551</span>
+<span class="normal">552</span>
+<span class="normal">553</span>
+<span class="normal">554</span>
+<span class="normal">555</span>
+<span class="normal">556</span>
+<span class="normal">557</span>
+<span class="normal">558</span>
+<span class="normal">559</span>
+<span class="normal">560</span>
+<span class="normal">561</span>
+<span class="normal">562</span>
+<span class="normal">563</span>
+<span class="normal">564</span>
+<span class="normal">565</span>
+<span class="normal">566</span>
+<span class="normal">567</span>
+<span class="normal">568</span>
+<span class="normal">569</span>
+<span class="normal">570</span>
+<span class="normal">571</span>
+<span class="normal">572</span>
+<span class="normal">573</span>
+<span class="normal">574</span>
+<span class="normal">575</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">DipcoinClient</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A client for interacting with the Dipcoin Protocol on Sui blockchain.</span>
 
 <span class="sd">    This client provides methods to interact with Dipcoin&#39;s liquidity pools,</span>
@@ -1340,10 +1395,14 @@ including adding/removing liquidity and performing swaps.</p>
 <span class="sd">        Args:</span>
 <span class="sd">            network (str, optional): The network to connect to. Defaults to &quot;testnet&quot;.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">cfg</span> <span class="o">=</span> <span class="n">PysuiConfiguration</span><span class="p">(</span><span class="n">group_name</span><span class="o">=</span><span class="n">PysuiConfiguration</span><span class="o">.</span><span class="n">SUI_GQL_RPC_GROUP</span> <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">AsyncGqlClient</span><span class="p">(</span><span class="n">pysui_config</span><span class="o">=</span><span class="n">cfg</span><span class="p">,</span><span class="n">write_schema</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">network</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;testnet&quot;</span><span class="p">,</span> <span class="s2">&quot;mainnet&quot;</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid network: </span><span class="si">{</span><span class="n">network</span><span class="si">}</span><span class="s2">, must be &#39;testnet&#39; or &#39;mainnet&#39;&quot;</span><span class="p">)</span>
+        <span class="n">cfg</span> <span class="o">=</span> <span class="n">PysuiConfiguration</span><span class="p">(</span><span class="n">group_name</span><span class="o">=</span><span class="n">PysuiConfiguration</span><span class="o">.</span><span class="n">SUI_GQL_RPC_GROUP</span><span class="p">,</span> <span class="n">profile_name</span><span class="o">=</span><span class="n">network</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">AsyncGqlClient</span><span class="p">(</span><span class="n">write_schema</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">pysui_config</span><span class="o">=</span><span class="n">cfg</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">query</span> <span class="o">=</span> <span class="n">DipCoinQuery</span><span class="p">(</span><span class="n">network</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">network</span> <span class="o">=</span> <span class="n">network</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initialized Dipcoin client for network: </span><span class="si">{</span><span class="n">network</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Active address: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">active_address</span><span class="p">)</span>
 
     <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_pool</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pool_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Pool</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieve information about a specific liquidity pool.</span>
@@ -1358,6 +1417,7 @@ including adding/removing liquidity and performing swaps.</p>
 <span class="sd">        Raises:</span>
 <span class="sd">            Exception: If there&#39;s an error parsing the pool data or an unknown error occurs.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Getting pool info for pool_id: </span><span class="si">{</span><span class="n">pool_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="n">qres</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">execute_query_node</span><span class="p">(</span>
             <span class="n">with_node</span><span class="o">=</span><span class="n">qn</span><span class="o">.</span><span class="n">GetObject</span><span class="p">(</span>
                 <span class="n">object_id</span><span class="o">=</span><span class="n">pool_id</span>
@@ -1366,12 +1426,17 @@ including adding/removing liquidity and performing swaps.</p>
         <span class="n">res</span> <span class="o">=</span> <span class="n">handle_result</span><span class="p">(</span><span class="n">qres</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">ObjectReadGQL</span><span class="p">):</span>
             <span class="k">try</span><span class="p">:</span>
-                <span class="k">return</span> <span class="n">Pool</span><span class="o">.</span><span class="n">from_gql_response</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-            <span class="k">except</span><span class="p">:</span>
+                <span class="n">pool</span> <span class="o">=</span> <span class="n">Pool</span><span class="o">.</span><span class="n">from_gql_response</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Successfully retrieved pool info for </span><span class="si">{</span><span class="n">pool_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">pool</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error parsing pool data: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
                 <span class="k">raise</span> <span class="n">UnreachableException</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown error: </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">NoopGQL</span><span class="p">):</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pool not found for pool_id: </span><span class="si">{</span><span class="n">pool_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">return</span> <span class="kc">None</span>
         <span class="k">else</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown response type for pool_id: </span><span class="si">{</span><span class="n">pool_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">raise</span> <span class="n">UnreachableException</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown error: </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
     <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_pool_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coin_x_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">coin_y_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
@@ -1410,6 +1475,7 @@ including adding/removing liquidity and performing swaps.</p>
 <span class="sd">        Returns:</span>
 <span class="sd">            TransactionResponse: A TransactionResponse object containing the transaction digest and status</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Adding liquidity: </span><span class="si">{</span><span class="n">coin_x_type</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">coin_x_amount</span><span class="si">}</span><span class="s2">) and </span><span class="si">{</span><span class="n">coin_y_type</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">coin_y_amount</span><span class="si">}</span><span class="s2">) with slippage </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="c1"># Ensure correct order of typeX and typeY</span>
             <span class="n">new_type_x</span><span class="p">,</span> <span class="n">new_type_y</span> <span class="o">=</span> <span class="n">sort_type</span><span class="p">(</span><span class="n">coin_x_type</span><span class="p">,</span> <span class="n">coin_y_type</span><span class="p">)</span>
@@ -1419,20 +1485,27 @@ including adding/removing liquidity and performing swaps.</p>
 
             <span class="k">if</span> <span class="n">is_change</span><span class="p">:</span>
                 <span class="n">coin_x_amount</span><span class="p">,</span> <span class="n">coin_y_amount</span> <span class="o">=</span> <span class="n">coin_y_amount</span><span class="p">,</span> <span class="n">coin_x_amount</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Swapped coin types and amounts due to sorting&quot;</span><span class="p">)</span>
 
             <span class="c1"># Validate input amounts</span>
             <span class="k">if</span> <span class="n">coin_x_amount</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">coin_y_amount</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Amount must be greater than 0&quot;</span><span class="p">)</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Amount must be greater than 0&quot;</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">slippage</span> <span class="o">&gt;=</span> <span class="mf">1.0</span> <span class="ow">or</span> <span class="n">slippage</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid slippage value: </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Slippage must be less than 100</span><span class="si">% a</span><span class="s2">nd greater than 0%&quot;</span><span class="p">)</span>
 
             <span class="c1"># Get pool information</span>
             <span class="n">pool_id</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">get_pool_id</span><span class="p">(</span><span class="n">coin_x_type</span><span class="p">,</span> <span class="n">coin_y_type</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">pool_id</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pool not found for </span><span class="si">{</span><span class="n">coin_x_type</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">coin_y_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
                 <span class="k">raise</span> <span class="n">PoolNotFound</span><span class="p">(</span><span class="n">coin_x_type</span><span class="p">,</span> <span class="n">coin_y_type</span><span class="p">)</span>
             <span class="n">pool</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_pool</span><span class="p">(</span><span class="n">pool_id</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">pool</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to get pool info for </span><span class="si">{</span><span class="n">pool_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
                 <span class="k">raise</span> <span class="n">PoolNotFound</span><span class="p">(</span><span class="n">coin_x_type</span><span class="p">,</span> <span class="n">coin_y_type</span><span class="p">)</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found pool </span><span class="si">{</span><span class="n">pool_id</span><span class="si">}</span><span class="s2"> with balances: X=</span><span class="si">{</span><span class="n">pool</span><span class="o">.</span><span class="n">bal_x</span><span class="si">}</span><span class="s2">, Y=</span><span class="si">{</span><span class="n">pool</span><span class="o">.</span><span class="n">bal_y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
             <span class="c1"># Calculate optimal amounts</span>
             <span class="n">coin_x_desired</span><span class="p">,</span> <span class="n">coin_y_desired</span> <span class="o">=</span> <span class="n">calc_optimal_coin_values</span><span class="p">(</span>
@@ -1444,6 +1517,8 @@ including adding/removing liquidity and performing swaps.</p>
             <span class="c1"># Calculate minimum accepted amounts (considering slippage)</span>
             <span class="n">coin_x_min</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">coin_x_desired</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">slippage</span><span class="p">))</span>
             <span class="n">coin_y_min</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">coin_y_desired</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">slippage</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Desired coin values: X=</span><span class="si">{</span><span class="n">coin_x_desired</span><span class="si">}</span><span class="s2">, Y=</span><span class="si">{</span><span class="n">coin_y_desired</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Minimum accepted amounts: X=</span><span class="si">{</span><span class="n">coin_x_min</span><span class="si">}</span><span class="s2">, Y=</span><span class="si">{</span><span class="n">coin_y_min</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
             <span class="c1"># Create transaction</span>
             <span class="n">txn</span> <span class="o">=</span> <span class="n">SuiTransaction</span><span class="p">(</span><span class="n">client</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="p">)</span>
@@ -1468,7 +1543,6 @@ including adding/removing liquidity and performing swaps.</p>
             <span class="k">await</span> <span class="n">txn</span><span class="o">.</span><span class="n">move_call</span><span class="p">(</span>
                 <span class="n">target</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">package_id</span><span class="si">}</span><span class="s2">::router::add_liquidity&quot;</span><span class="p">,</span>
                 <span class="n">arguments</span><span class="o">=</span><span class="p">[</span>
-                    <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">version_id</span><span class="p">,</span>
                     <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">global_id</span><span class="p">,</span>
                     <span class="n">pool_id</span><span class="p">,</span>
                     <span class="n">split_coin_x</span><span class="p">,</span>
@@ -1496,7 +1570,7 @@ including adding/removing liquidity and performing swaps.</p>
             <span class="k">return</span> <span class="n">TransactionResponse</span><span class="p">(</span>
                 <span class="n">digest</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
                 <span class="n">status</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                <span class="n">error</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+                <span class="n">error</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Unexpected error: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
             <span class="p">)</span>
 
     <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">remove_liquidity</span><span class="p">(</span>
@@ -1521,14 +1595,17 @@ including adding/removing liquidity and performing swaps.</p>
 <span class="sd">        Returns:</span>
 <span class="sd">            TransactionResponse: A TransactionResponse object containing the transaction digest and status</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Removing liquidity: </span><span class="si">{</span><span class="n">lp_amount</span><span class="si">}</span><span class="s2"> LP tokens for </span><span class="si">{</span><span class="n">coin_x_type</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">coin_y_type</span><span class="si">}</span><span class="s2"> with slippage </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">lp_amount</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;LP amount must be greater than 0&quot;</span><span class="p">)</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Amount must be greater than 0&quot;</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">slippage</span> <span class="o">&gt;=</span> <span class="mf">1.0</span> <span class="ow">or</span> <span class="n">slippage</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid slippage value: </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Slippage must be less than 100</span><span class="si">% a</span><span class="s2">nd greater than 0%&quot;</span><span class="p">)</span>
 
             <span class="n">coin_x_type</span><span class="p">,</span> <span class="n">coin_y_type</span><span class="p">,</span> <span class="n">lp_type</span> <span class="o">=</span> <span class="n">sort_and_get_lp_type</span><span class="p">(</span>
-                <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">package_id</span><span class="p">,</span>
+                <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">initial_package_id</span><span class="p">,</span>
                 <span class="n">coin_x_type</span><span class="p">,</span>
                 <span class="n">coin_y_type</span>
             <span class="p">)</span>
@@ -1561,7 +1638,6 @@ including adding/removing liquidity and performing swaps.</p>
             <span class="k">await</span> <span class="n">txn</span><span class="o">.</span><span class="n">move_call</span><span class="p">(</span>
                 <span class="n">target</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">package_id</span><span class="si">}</span><span class="s2">::router::remove_liquidity&quot;</span><span class="p">,</span>
                 <span class="n">arguments</span><span class="o">=</span><span class="p">[</span>
-                    <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">version_id</span><span class="p">,</span>
                     <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">global_id</span><span class="p">,</span>
                     <span class="n">pool_id</span><span class="p">,</span>
                     <span class="n">split_lp_coin</span><span class="p">,</span>
@@ -1604,10 +1680,13 @@ including adding/removing liquidity and performing swaps.</p>
 <span class="sd">        Returns:</span>
 <span class="sd">            TransactionResponse: A TransactionResponse object containing the transaction digest and status</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Swapping exact in: </span><span class="si">{</span><span class="n">amount_in</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">coin_in_type</span><span class="si">}</span><span class="s2"> for </span><span class="si">{</span><span class="n">coin_out_type</span><span class="si">}</span><span class="s2"> with slippage </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">amount_in</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Input amount must be greater than 0&quot;</span><span class="p">)</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Amount must be greater than 0&quot;</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">slippage</span> <span class="o">&gt;=</span> <span class="mf">1.0</span> <span class="ow">or</span> <span class="n">slippage</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid slippage value: </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Slippage must be less than 100</span><span class="si">% a</span><span class="s2">nd greater than 0%&quot;</span><span class="p">)</span>
 
             <span class="n">pool_id</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">get_pool_id</span><span class="p">(</span><span class="n">coin_in_type</span><span class="p">,</span> <span class="n">coin_out_type</span><span class="p">)</span>
@@ -1654,7 +1733,6 @@ including adding/removing liquidity and performing swaps.</p>
             <span class="k">await</span> <span class="n">txn</span><span class="o">.</span><span class="n">move_call</span><span class="p">(</span>
                 <span class="n">target</span><span class="o">=</span><span class="n">target</span><span class="p">,</span>
                 <span class="n">arguments</span><span class="o">=</span><span class="p">[</span>
-                    <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">version_id</span><span class="p">,</span>
                     <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">global_id</span><span class="p">,</span>
                     <span class="n">pool_id</span><span class="p">,</span>
                     <span class="n">split_coin_in</span><span class="p">,</span>
@@ -1696,10 +1774,13 @@ including adding/removing liquidity and performing swaps.</p>
 <span class="sd">        Returns:</span>
 <span class="sd">            TransactionResponse: A TransactionResponse object containing the transaction digest and status</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Swapping exact out: </span><span class="si">{</span><span class="n">coin_in_type</span><span class="si">}</span><span class="s2"> for </span><span class="si">{</span><span class="n">amount_out</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">coin_out_type</span><span class="si">}</span><span class="s2"> with slippage </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">amount_out</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Output amount must be greater than 0&quot;</span><span class="p">)</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Amount must be greater than 0&quot;</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">slippage</span> <span class="o">&gt;=</span> <span class="mf">1.0</span> <span class="ow">or</span> <span class="n">slippage</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid slippage value: </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Slippage must be less than 100</span><span class="si">% a</span><span class="s2">nd greater than 0%&quot;</span><span class="p">)</span>
 
             <span class="c1"># Get pool info</span>
@@ -1743,7 +1824,6 @@ including adding/removing liquidity and performing swaps.</p>
             <span class="k">await</span> <span class="n">txn</span><span class="o">.</span><span class="n">move_call</span><span class="p">(</span>
                 <span class="n">target</span><span class="o">=</span><span class="n">target</span><span class="p">,</span>
                 <span class="n">arguments</span><span class="o">=</span><span class="p">[</span>
-                    <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">version_id</span><span class="p">,</span>
                     <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">global_id</span><span class="p">,</span>
                     <span class="n">pool_id</span><span class="p">,</span>
                     <span class="n">split_coin_in</span><span class="p">,</span>
@@ -1764,19 +1844,22 @@ including adding/removing liquidity and performing swaps.</p>
 
     <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">_execute_and_wait</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">txn</span><span class="p">:</span> <span class="n">SuiTransaction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TransactionResponse</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Execute transaction and wait for it to be processed&quot;&quot;&quot;</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Executing transaction&quot;</span><span class="p">)</span>
         <span class="n">tx_data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">txn</span><span class="o">.</span><span class="n">build_and_sign</span><span class="p">()</span>
         <span class="n">tx_result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">txn</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">execute_query_node</span><span class="p">(</span>
             <span class="n">with_node</span><span class="o">=</span><span class="n">qn</span><span class="o">.</span><span class="n">ExecuteTransaction</span><span class="p">(</span><span class="o">**</span><span class="n">tx_data</span><span class="p">)</span>
         <span class="p">)</span>
         <span class="k">if</span> <span class="n">tx_result</span><span class="o">.</span><span class="n">is_err</span><span class="p">():</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Transaction execution failed: </span><span class="si">{</span><span class="n">tx_result</span><span class="o">.</span><span class="n">result_string</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">TransactionResponse</span><span class="p">(</span>
                 <span class="n">digest</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
                 <span class="n">status</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                <span class="n">error</span><span class="o">=</span><span class="n">tx_result</span><span class="o">.</span><span class="n">result_string</span>
+                <span class="n">error</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;ExecuteTransaction error: </span><span class="si">{</span><span class="n">tx_result</span><span class="o">.</span><span class="n">result_string</span><span class="si">}</span><span class="s2">&quot;</span>
             <span class="p">)</span>
         <span class="n">tx_result</span> <span class="o">=</span> <span class="n">handle_result</span><span class="p">(</span><span class="n">tx_result</span><span class="p">)</span>
         <span class="k">assert</span> <span class="n">tx_result</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s1">&#39;SUCCESS&#39;</span><span class="p">,</span> <span class="n">tx_result</span><span class="o">.</span><span class="n">status</span>
-        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">wait_for_transaction</span><span class="p">(</span><span class="n">digest</span><span class="o">=</span><span class="n">tx_result</span><span class="o">.</span><span class="n">digest</span><span class="p">)</span> <span class="c1"># TODO: check effects</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Transaction executed successfully with digest: </span><span class="si">{</span><span class="n">tx_result</span><span class="o">.</span><span class="n">digest</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">wait_for_transaction</span><span class="p">(</span><span class="n">digest</span><span class="o">=</span><span class="n">tx_result</span><span class="o">.</span><span class="n">digest</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">TransactionResponse</span><span class="p">(</span>
             <span class="n">digest</span><span class="o">=</span><span class="n">tx_result</span><span class="o">.</span><span class="n">digest</span><span class="p">,</span>
             <span class="n">status</span><span class="o">=</span><span class="kc">True</span>
@@ -1902,19 +1985,23 @@ including adding/removing liquidity and performing swaps.</p>
 
             <details class="quote">
               <summary>Source code in <code>dipcoin/client.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span> 
     <span class="n">network</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;testnet&quot;</span>
 <span class="p">):</span>
@@ -1923,10 +2010,14 @@ including adding/removing liquidity and performing swaps.</p>
 <span class="sd">    Args:</span>
 <span class="sd">        network (str, optional): The network to connect to. Defaults to &quot;testnet&quot;.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">cfg</span> <span class="o">=</span> <span class="n">PysuiConfiguration</span><span class="p">(</span><span class="n">group_name</span><span class="o">=</span><span class="n">PysuiConfiguration</span><span class="o">.</span><span class="n">SUI_GQL_RPC_GROUP</span> <span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">AsyncGqlClient</span><span class="p">(</span><span class="n">pysui_config</span><span class="o">=</span><span class="n">cfg</span><span class="p">,</span><span class="n">write_schema</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">network</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;testnet&quot;</span><span class="p">,</span> <span class="s2">&quot;mainnet&quot;</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid network: </span><span class="si">{</span><span class="n">network</span><span class="si">}</span><span class="s2">, must be &#39;testnet&#39; or &#39;mainnet&#39;&quot;</span><span class="p">)</span>
+    <span class="n">cfg</span> <span class="o">=</span> <span class="n">PysuiConfiguration</span><span class="p">(</span><span class="n">group_name</span><span class="o">=</span><span class="n">PysuiConfiguration</span><span class="o">.</span><span class="n">SUI_GQL_RPC_GROUP</span><span class="p">,</span> <span class="n">profile_name</span><span class="o">=</span><span class="n">network</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">AsyncGqlClient</span><span class="p">(</span><span class="n">write_schema</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">pysui_config</span><span class="o">=</span><span class="n">cfg</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">query</span> <span class="o">=</span> <span class="n">DipCoinQuery</span><span class="p">(</span><span class="n">network</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">network</span> <span class="o">=</span> <span class="n">network</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initialized Dipcoin client for network: </span><span class="si">{</span><span class="n">network</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Active address: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">active_address</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
@@ -2074,29 +2165,7 @@ in the pair. The amounts are automatically adjusted to maintain the pool's price
 
             <details class="quote">
               <summary>Source code in <code>dipcoin/client.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">104</span>
 <span class="normal">105</span>
 <span class="normal">106</span>
 <span class="normal">107</span>
@@ -2185,7 +2254,38 @@ in the pair. The amounts are automatically adjusted to maintain the pool's price
 <span class="normal">190</span>
 <span class="normal">191</span>
 <span class="normal">192</span>
-<span class="normal">193</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">add_liquidity</span><span class="p">(</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">add_liquidity</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">coin_x_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">coin_y_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -2209,6 +2309,7 @@ in the pair. The amounts are automatically adjusted to maintain the pool's price
 <span class="sd">    Returns:</span>
 <span class="sd">        TransactionResponse: A TransactionResponse object containing the transaction digest and status</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Adding liquidity: </span><span class="si">{</span><span class="n">coin_x_type</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">coin_x_amount</span><span class="si">}</span><span class="s2">) and </span><span class="si">{</span><span class="n">coin_y_type</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">coin_y_amount</span><span class="si">}</span><span class="s2">) with slippage </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># Ensure correct order of typeX and typeY</span>
         <span class="n">new_type_x</span><span class="p">,</span> <span class="n">new_type_y</span> <span class="o">=</span> <span class="n">sort_type</span><span class="p">(</span><span class="n">coin_x_type</span><span class="p">,</span> <span class="n">coin_y_type</span><span class="p">)</span>
@@ -2218,20 +2319,27 @@ in the pair. The amounts are automatically adjusted to maintain the pool's price
 
         <span class="k">if</span> <span class="n">is_change</span><span class="p">:</span>
             <span class="n">coin_x_amount</span><span class="p">,</span> <span class="n">coin_y_amount</span> <span class="o">=</span> <span class="n">coin_y_amount</span><span class="p">,</span> <span class="n">coin_x_amount</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Swapped coin types and amounts due to sorting&quot;</span><span class="p">)</span>
 
         <span class="c1"># Validate input amounts</span>
         <span class="k">if</span> <span class="n">coin_x_amount</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">coin_y_amount</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Amount must be greater than 0&quot;</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Amount must be greater than 0&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">slippage</span> <span class="o">&gt;=</span> <span class="mf">1.0</span> <span class="ow">or</span> <span class="n">slippage</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid slippage value: </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Slippage must be less than 100</span><span class="si">% a</span><span class="s2">nd greater than 0%&quot;</span><span class="p">)</span>
 
         <span class="c1"># Get pool information</span>
         <span class="n">pool_id</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">get_pool_id</span><span class="p">(</span><span class="n">coin_x_type</span><span class="p">,</span> <span class="n">coin_y_type</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">pool_id</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pool not found for </span><span class="si">{</span><span class="n">coin_x_type</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">coin_y_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">raise</span> <span class="n">PoolNotFound</span><span class="p">(</span><span class="n">coin_x_type</span><span class="p">,</span> <span class="n">coin_y_type</span><span class="p">)</span>
         <span class="n">pool</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_pool</span><span class="p">(</span><span class="n">pool_id</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">pool</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to get pool info for </span><span class="si">{</span><span class="n">pool_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">raise</span> <span class="n">PoolNotFound</span><span class="p">(</span><span class="n">coin_x_type</span><span class="p">,</span> <span class="n">coin_y_type</span><span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found pool </span><span class="si">{</span><span class="n">pool_id</span><span class="si">}</span><span class="s2"> with balances: X=</span><span class="si">{</span><span class="n">pool</span><span class="o">.</span><span class="n">bal_x</span><span class="si">}</span><span class="s2">, Y=</span><span class="si">{</span><span class="n">pool</span><span class="o">.</span><span class="n">bal_y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
         <span class="c1"># Calculate optimal amounts</span>
         <span class="n">coin_x_desired</span><span class="p">,</span> <span class="n">coin_y_desired</span> <span class="o">=</span> <span class="n">calc_optimal_coin_values</span><span class="p">(</span>
@@ -2243,6 +2351,8 @@ in the pair. The amounts are automatically adjusted to maintain the pool's price
         <span class="c1"># Calculate minimum accepted amounts (considering slippage)</span>
         <span class="n">coin_x_min</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">coin_x_desired</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">slippage</span><span class="p">))</span>
         <span class="n">coin_y_min</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">coin_y_desired</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">slippage</span><span class="p">))</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Desired coin values: X=</span><span class="si">{</span><span class="n">coin_x_desired</span><span class="si">}</span><span class="s2">, Y=</span><span class="si">{</span><span class="n">coin_y_desired</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Minimum accepted amounts: X=</span><span class="si">{</span><span class="n">coin_x_min</span><span class="si">}</span><span class="s2">, Y=</span><span class="si">{</span><span class="n">coin_y_min</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
         <span class="c1"># Create transaction</span>
         <span class="n">txn</span> <span class="o">=</span> <span class="n">SuiTransaction</span><span class="p">(</span><span class="n">client</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="p">)</span>
@@ -2267,7 +2377,6 @@ in the pair. The amounts are automatically adjusted to maintain the pool's price
         <span class="k">await</span> <span class="n">txn</span><span class="o">.</span><span class="n">move_call</span><span class="p">(</span>
             <span class="n">target</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">package_id</span><span class="si">}</span><span class="s2">::router::add_liquidity&quot;</span><span class="p">,</span>
             <span class="n">arguments</span><span class="o">=</span><span class="p">[</span>
-                <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">version_id</span><span class="p">,</span>
                 <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">global_id</span><span class="p">,</span>
                 <span class="n">pool_id</span><span class="p">,</span>
                 <span class="n">split_coin_x</span><span class="p">,</span>
@@ -2295,7 +2404,7 @@ in the pair. The amounts are automatically adjusted to maintain the pool's price
         <span class="k">return</span> <span class="n">TransactionResponse</span><span class="p">(</span>
             <span class="n">digest</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
             <span class="n">status</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-            <span class="n">error</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="n">error</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Unexpected error: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
@@ -2401,23 +2510,7 @@ in the pair. The amounts are automatically adjusted to maintain the pool's price
 
             <details class="quote">
               <summary>Source code in <code>dipcoin/client.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">57</span>
 <span class="normal">58</span>
 <span class="normal">59</span>
 <span class="normal">60</span>
@@ -2428,7 +2521,29 @@ in the pair. The amounts are automatically adjusted to maintain the pool's price
 <span class="normal">65</span>
 <span class="normal">66</span>
 <span class="normal">67</span>
-<span class="normal">68</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_pool</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pool_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Pool</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_pool</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pool_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Pool</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Retrieve information about a specific liquidity pool.</span>
 
 <span class="sd">    Args:</span>
@@ -2441,6 +2556,7 @@ in the pair. The amounts are automatically adjusted to maintain the pool's price
 <span class="sd">    Raises:</span>
 <span class="sd">        Exception: If there&#39;s an error parsing the pool data or an unknown error occurs.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Getting pool info for pool_id: </span><span class="si">{</span><span class="n">pool_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">qres</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">execute_query_node</span><span class="p">(</span>
         <span class="n">with_node</span><span class="o">=</span><span class="n">qn</span><span class="o">.</span><span class="n">GetObject</span><span class="p">(</span>
             <span class="n">object_id</span><span class="o">=</span><span class="n">pool_id</span>
@@ -2449,12 +2565,17 @@ in the pair. The amounts are automatically adjusted to maintain the pool's price
     <span class="n">res</span> <span class="o">=</span> <span class="n">handle_result</span><span class="p">(</span><span class="n">qres</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">ObjectReadGQL</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">Pool</span><span class="o">.</span><span class="n">from_gql_response</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-        <span class="k">except</span><span class="p">:</span>
+            <span class="n">pool</span> <span class="o">=</span> <span class="n">Pool</span><span class="o">.</span><span class="n">from_gql_response</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Successfully retrieved pool info for </span><span class="si">{</span><span class="n">pool_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">pool</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error parsing pool data: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">raise</span> <span class="n">UnreachableException</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown error: </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">NoopGQL</span><span class="p">):</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pool not found for pool_id: </span><span class="si">{</span><span class="n">pool_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="k">else</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown response type for pool_id: </span><span class="si">{</span><span class="n">pool_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">raise</span> <span class="n">UnreachableException</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown error: </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
@@ -2552,17 +2673,17 @@ in the pair. The amounts are automatically adjusted to maintain the pool's price
 
             <details class="quote">
               <summary>Source code in <code>dipcoin/client.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_pool_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coin_x_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">coin_y_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_pool_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coin_x_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">coin_y_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the pool ID for a given pair of tokens.</span>
 
 <span class="sd">    Args:</span>
@@ -2684,38 +2805,7 @@ to their share of the pool.</p>
 
             <details class="quote">
               <summary>Source code in <code>dipcoin/client.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">195</span>
-<span class="normal">196</span>
-<span class="normal">197</span>
-<span class="normal">198</span>
-<span class="normal">199</span>
-<span class="normal">200</span>
-<span class="normal">201</span>
-<span class="normal">202</span>
-<span class="normal">203</span>
-<span class="normal">204</span>
-<span class="normal">205</span>
-<span class="normal">206</span>
-<span class="normal">207</span>
-<span class="normal">208</span>
-<span class="normal">209</span>
-<span class="normal">210</span>
-<span class="normal">211</span>
-<span class="normal">212</span>
-<span class="normal">213</span>
-<span class="normal">214</span>
-<span class="normal">215</span>
-<span class="normal">216</span>
-<span class="normal">217</span>
-<span class="normal">218</span>
-<span class="normal">219</span>
-<span class="normal">220</span>
-<span class="normal">221</span>
-<span class="normal">222</span>
-<span class="normal">223</span>
-<span class="normal">224</span>
-<span class="normal">225</span>
-<span class="normal">226</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">226</span>
 <span class="normal">227</span>
 <span class="normal">228</span>
 <span class="normal">229</span>
@@ -2764,7 +2854,40 @@ to their share of the pool.</p>
 <span class="normal">272</span>
 <span class="normal">273</span>
 <span class="normal">274</span>
-<span class="normal">275</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">remove_liquidity</span><span class="p">(</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">remove_liquidity</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">coin_x_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">coin_y_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -2786,14 +2909,17 @@ to their share of the pool.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        TransactionResponse: A TransactionResponse object containing the transaction digest and status</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Removing liquidity: </span><span class="si">{</span><span class="n">lp_amount</span><span class="si">}</span><span class="s2"> LP tokens for </span><span class="si">{</span><span class="n">coin_x_type</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">coin_y_type</span><span class="si">}</span><span class="s2"> with slippage </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">lp_amount</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;LP amount must be greater than 0&quot;</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Amount must be greater than 0&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">slippage</span> <span class="o">&gt;=</span> <span class="mf">1.0</span> <span class="ow">or</span> <span class="n">slippage</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid slippage value: </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Slippage must be less than 100</span><span class="si">% a</span><span class="s2">nd greater than 0%&quot;</span><span class="p">)</span>
 
         <span class="n">coin_x_type</span><span class="p">,</span> <span class="n">coin_y_type</span><span class="p">,</span> <span class="n">lp_type</span> <span class="o">=</span> <span class="n">sort_and_get_lp_type</span><span class="p">(</span>
-            <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">package_id</span><span class="p">,</span>
+            <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">initial_package_id</span><span class="p">,</span>
             <span class="n">coin_x_type</span><span class="p">,</span>
             <span class="n">coin_y_type</span>
         <span class="p">)</span>
@@ -2826,7 +2952,6 @@ to their share of the pool.</p>
         <span class="k">await</span> <span class="n">txn</span><span class="o">.</span><span class="n">move_call</span><span class="p">(</span>
             <span class="n">target</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">package_id</span><span class="si">}</span><span class="s2">::router::remove_liquidity&quot;</span><span class="p">,</span>
             <span class="n">arguments</span><span class="o">=</span><span class="p">[</span>
-                <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">version_id</span><span class="p">,</span>
                 <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">global_id</span><span class="p">,</span>
                 <span class="n">pool_id</span><span class="p">,</span>
                 <span class="n">split_lp_coin</span><span class="p">,</span>
@@ -2977,40 +3102,7 @@ current price and liquidity.</p>
 
             <details class="quote">
               <summary>Source code in <code>dipcoin/client.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">277</span>
-<span class="normal">278</span>
-<span class="normal">279</span>
-<span class="normal">280</span>
-<span class="normal">281</span>
-<span class="normal">282</span>
-<span class="normal">283</span>
-<span class="normal">284</span>
-<span class="normal">285</span>
-<span class="normal">286</span>
-<span class="normal">287</span>
-<span class="normal">288</span>
-<span class="normal">289</span>
-<span class="normal">290</span>
-<span class="normal">291</span>
-<span class="normal">292</span>
-<span class="normal">293</span>
-<span class="normal">294</span>
-<span class="normal">295</span>
-<span class="normal">296</span>
-<span class="normal">297</span>
-<span class="normal">298</span>
-<span class="normal">299</span>
-<span class="normal">300</span>
-<span class="normal">301</span>
-<span class="normal">302</span>
-<span class="normal">303</span>
-<span class="normal">304</span>
-<span class="normal">305</span>
-<span class="normal">306</span>
-<span class="normal">307</span>
-<span class="normal">308</span>
-<span class="normal">309</span>
-<span class="normal">310</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">310</span>
 <span class="normal">311</span>
 <span class="normal">312</span>
 <span class="normal">313</span>
@@ -3067,7 +3159,42 @@ current price and liquidity.</p>
 <span class="normal">364</span>
 <span class="normal">365</span>
 <span class="normal">366</span>
-<span class="normal">367</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">swap_exact_in</span><span class="p">(</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">swap_exact_in</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">coin_in_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">coin_out_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -3090,10 +3217,13 @@ current price and liquidity.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        TransactionResponse: A TransactionResponse object containing the transaction digest and status</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Swapping exact in: </span><span class="si">{</span><span class="n">amount_in</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">coin_in_type</span><span class="si">}</span><span class="s2"> for </span><span class="si">{</span><span class="n">coin_out_type</span><span class="si">}</span><span class="s2"> with slippage </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">amount_in</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Input amount must be greater than 0&quot;</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Amount must be greater than 0&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">slippage</span> <span class="o">&gt;=</span> <span class="mf">1.0</span> <span class="ow">or</span> <span class="n">slippage</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid slippage value: </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Slippage must be less than 100</span><span class="si">% a</span><span class="s2">nd greater than 0%&quot;</span><span class="p">)</span>
 
         <span class="n">pool_id</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">get_pool_id</span><span class="p">(</span><span class="n">coin_in_type</span><span class="p">,</span> <span class="n">coin_out_type</span><span class="p">)</span>
@@ -3140,7 +3270,6 @@ current price and liquidity.</p>
         <span class="k">await</span> <span class="n">txn</span><span class="o">.</span><span class="n">move_call</span><span class="p">(</span>
             <span class="n">target</span><span class="o">=</span><span class="n">target</span><span class="p">,</span>
             <span class="n">arguments</span><span class="o">=</span><span class="p">[</span>
-                <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">version_id</span><span class="p">,</span>
                 <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">global_id</span><span class="p">,</span>
                 <span class="n">pool_id</span><span class="p">,</span>
                 <span class="n">split_coin_in</span><span class="p">,</span>
@@ -3290,42 +3419,7 @@ the pool's current price and liquidity.</p>
 
             <details class="quote">
               <summary>Source code in <code>dipcoin/client.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">369</span>
-<span class="normal">370</span>
-<span class="normal">371</span>
-<span class="normal">372</span>
-<span class="normal">373</span>
-<span class="normal">374</span>
-<span class="normal">375</span>
-<span class="normal">376</span>
-<span class="normal">377</span>
-<span class="normal">378</span>
-<span class="normal">379</span>
-<span class="normal">380</span>
-<span class="normal">381</span>
-<span class="normal">382</span>
-<span class="normal">383</span>
-<span class="normal">384</span>
-<span class="normal">385</span>
-<span class="normal">386</span>
-<span class="normal">387</span>
-<span class="normal">388</span>
-<span class="normal">389</span>
-<span class="normal">390</span>
-<span class="normal">391</span>
-<span class="normal">392</span>
-<span class="normal">393</span>
-<span class="normal">394</span>
-<span class="normal">395</span>
-<span class="normal">396</span>
-<span class="normal">397</span>
-<span class="normal">398</span>
-<span class="normal">399</span>
-<span class="normal">400</span>
-<span class="normal">401</span>
-<span class="normal">402</span>
-<span class="normal">403</span>
-<span class="normal">404</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">404</span>
 <span class="normal">405</span>
 <span class="normal">406</span>
 <span class="normal">407</span>
@@ -3377,7 +3471,44 @@ the pool's current price and liquidity.</p>
 <span class="normal">453</span>
 <span class="normal">454</span>
 <span class="normal">455</span>
-<span class="normal">456</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">swap_exact_out</span><span class="p">(</span>
+<span class="normal">456</span>
+<span class="normal">457</span>
+<span class="normal">458</span>
+<span class="normal">459</span>
+<span class="normal">460</span>
+<span class="normal">461</span>
+<span class="normal">462</span>
+<span class="normal">463</span>
+<span class="normal">464</span>
+<span class="normal">465</span>
+<span class="normal">466</span>
+<span class="normal">467</span>
+<span class="normal">468</span>
+<span class="normal">469</span>
+<span class="normal">470</span>
+<span class="normal">471</span>
+<span class="normal">472</span>
+<span class="normal">473</span>
+<span class="normal">474</span>
+<span class="normal">475</span>
+<span class="normal">476</span>
+<span class="normal">477</span>
+<span class="normal">478</span>
+<span class="normal">479</span>
+<span class="normal">480</span>
+<span class="normal">481</span>
+<span class="normal">482</span>
+<span class="normal">483</span>
+<span class="normal">484</span>
+<span class="normal">485</span>
+<span class="normal">486</span>
+<span class="normal">487</span>
+<span class="normal">488</span>
+<span class="normal">489</span>
+<span class="normal">490</span>
+<span class="normal">491</span>
+<span class="normal">492</span>
+<span class="normal">493</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">swap_exact_out</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">coin_in_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">coin_out_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -3400,10 +3531,13 @@ the pool's current price and liquidity.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        TransactionResponse: A TransactionResponse object containing the transaction digest and status</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Swapping exact out: </span><span class="si">{</span><span class="n">coin_in_type</span><span class="si">}</span><span class="s2"> for </span><span class="si">{</span><span class="n">amount_out</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">coin_out_type</span><span class="si">}</span><span class="s2"> with slippage </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">amount_out</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Output amount must be greater than 0&quot;</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Amount must be greater than 0&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">slippage</span> <span class="o">&gt;=</span> <span class="mf">1.0</span> <span class="ow">or</span> <span class="n">slippage</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid slippage value: </span><span class="si">{</span><span class="n">slippage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Slippage must be less than 100</span><span class="si">% a</span><span class="s2">nd greater than 0%&quot;</span><span class="p">)</span>
 
         <span class="c1"># Get pool info</span>
@@ -3447,7 +3581,6 @@ the pool's current price and liquidity.</p>
         <span class="k">await</span> <span class="n">txn</span><span class="o">.</span><span class="n">move_call</span><span class="p">(</span>
             <span class="n">target</span><span class="o">=</span><span class="n">target</span><span class="p">,</span>
             <span class="n">arguments</span><span class="o">=</span><span class="p">[</span>
-                <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">version_id</span><span class="p">,</span>
                 <span class="n">CONTRACT_CONSTANTS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">network</span><span class="p">]</span><span class="o">.</span><span class="n">global_id</span><span class="p">,</span>
                 <span class="n">pool_id</span><span class="p">,</span>
                 <span class="n">split_coin_in</span><span class="p">,</span>
@@ -3640,10 +3773,7 @@ the pool's current price and liquidity.</p>
 
               <details class="quote">
                 <summary>Source code in <code>dipcoin/types.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
@@ -3701,7 +3831,10 @@ the pool's current price and liquidity.</p>
 <span class="normal">62</span>
 <span class="normal">63</span>
 <span class="normal">64</span>
-<span class="normal">65</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Pool</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Pool</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Represents a liquidity pool in the DIP protocol.</span>
 
@@ -3852,10 +3985,7 @@ the pool's current price and liquidity.</p>
 
             <details class="quote">
               <summary>Source code in <code>dipcoin/types.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">48</span>
 <span class="normal">49</span>
 <span class="normal">50</span>
 <span class="normal">51</span>
@@ -3872,7 +4002,10 @@ the pool's current price and liquidity.</p>
 <span class="normal">62</span>
 <span class="normal">63</span>
 <span class="normal">64</span>
-<span class="normal">65</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">from_gql_response</span><span class="p">(</span><span class="n">response</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Pool&quot;</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Creates a Pool instance from a GraphQL response.</span>
@@ -3990,10 +4123,7 @@ the pool's current price and liquidity.</p>
 
             <details class="quote">
               <summary>Source code in <code>dipcoin/types.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">30</span>
 <span class="normal">31</span>
 <span class="normal">32</span>
 <span class="normal">33</span>
@@ -4006,7 +4136,10 @@ the pool's current price and liquidity.</p>
 <span class="normal">40</span>
 <span class="normal">41</span>
 <span class="normal">42</span>
-<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@field_validator</span><span class="p">(</span><span class="s1">&#39;bal_x&#39;</span><span class="p">,</span> <span class="s1">&#39;bal_y&#39;</span><span class="p">,</span> <span class="s1">&#39;fee_bal_x&#39;</span><span class="p">,</span> <span class="s1">&#39;fee_bal_y&#39;</span><span class="p">,</span> <span class="s1">&#39;lp_supply&#39;</span><span class="p">,</span> <span class="s1">&#39;fee_rate&#39;</span><span class="p">,</span> <span class="s1">&#39;min_liquidity&#39;</span><span class="p">)</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@field_validator</span><span class="p">(</span><span class="s1">&#39;bal_x&#39;</span><span class="p">,</span> <span class="s1">&#39;bal_y&#39;</span><span class="p">,</span> <span class="s1">&#39;fee_bal_x&#39;</span><span class="p">,</span> <span class="s1">&#39;fee_bal_y&#39;</span><span class="p">,</span> <span class="s1">&#39;lp_supply&#39;</span><span class="p">,</span> <span class="s1">&#39;fee_rate&#39;</span><span class="p">,</span> <span class="s1">&#39;min_liquidity&#39;</span><span class="p">)</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">validate_u64</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Validates that the value is a valid U64 integer.</span>
@@ -4110,10 +4243,7 @@ the pool's current price and liquidity.</p>
 
               <details class="quote">
                 <summary>Source code in <code>dipcoin/types.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">70</span>
 <span class="normal">71</span>
 <span class="normal">72</span>
 <span class="normal">73</span>
@@ -4121,7 +4251,10 @@ the pool's current price and liquidity.</p>
 <span class="normal">75</span>
 <span class="normal">76</span>
 <span class="normal">77</span>
-<span class="normal">78</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">TransactionResponse</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">TransactionResponse</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Represents the response from a blockchain transaction.</span>
 
