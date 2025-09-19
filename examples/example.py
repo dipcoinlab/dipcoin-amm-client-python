@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Dipcoin LLC
+# SPDX-License-Identifier: Apache-2.0
+
 import asyncio
 import dipcoin
 from dipcoin.constants import CONTRACT_CONSTANTS, TESTNET_FAUCET
@@ -29,11 +32,11 @@ async def test_swap_exact_out(client: dipcoin.DipcoinClient):
     print(await client.swap_exact_out(TESTNET_FAUCET['COIN_WSOL'], TESTNET_FAUCET['COIN_USDC'], 200000))
     
 async def test_all(client: dipcoin.DipcoinClient):
-    await test_pool(client)
+    # await test_pool(client)
     await test_add_liquidity(client)
-    await test_remove_liquidity(client)
-    await test_swap_exact_in(client)
-    await test_swap_exact_out(client)
+    # await test_remove_liquidity(client)
+    # await test_swap_exact_in(client)
+    # await test_swap_exact_out(client)
 
 if __name__ == "__main__":
     client = dipcoin.DipcoinClient(network="testnet")

@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Dipcoin LLC
+# SPDX-License-Identifier: Apache-2.0
+
 import httpx
 from typing import Dict, Any
 from pysui.sui.sui_common.async_funcs import AsyncLRU

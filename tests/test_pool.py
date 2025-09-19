@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Dipcoin LLC
+# SPDX-License-Identifier: Apache-2.0
+
 import pytest
 from dipcoin.types import Pool
 from dipcoin.math import U64_MAX

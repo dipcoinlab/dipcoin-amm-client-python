@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Dipcoin LLC
+# SPDX-License-Identifier: Apache-2.0
+
 from canoser import StrT
 
 def compare_u8_vector(left: bytes, right: bytes) -> bool:

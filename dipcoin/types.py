@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Dipcoin LLC
+# SPDX-License-Identifier: Apache-2.0
+
 from pydantic import BaseModel, field_validator
 from .math import U64_MAX
 

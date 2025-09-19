@@ -1,19 +1,22 @@
+# Copyright (c) 2025 Dipcoin LLC
+# SPDX-License-Identifier: Apache-2.0
+
 from pydantic import BaseModel
 
 class ContractConstants(BaseModel):
+    initial_package_id: str | None = None
     package_id: str
     admin_cap_id: str
-    version_id: str
     global_id: str
     pool_registry_table_id: str
 
 CONTRACT_CONSTANTS = {
     "testnet": ContractConstants(
-        package_id="0xdd07cd4192c61a81f82718e0581c3c861e43e81ca26e46ae540276b95ed8d52d",
-        admin_cap_id="0x1e291ad24506c86251dd03d94580b5292c0316c5e6c09688c4d1810b33b5ec17",
-        version_id="0x99c565e4e87576433ffab5f66f7bce0db3d5f72785eed5384e681c22311af820",
-        global_id="0x0a2ba97c9dad085366a35be0e48b51d353dc9b6e7ccfe723c4b2b56745d3e623",
-        pool_registry_table_id="0x60347e948bb7b9c7f42715f66dbe4e5e5060bae19be1483e2b6daf1364fb1e42",
+        initial_package_id="0x8fa1e6e1da7d34d15d867702a78e0ba391e08b28fac913b2d16c16301fe914bd",
+        package_id="0x0d49def4e064373781d211d778f5779b7b655556983f4108a76cce8e216f2e55",
+        admin_cap_id="0x80c9b8db86eb5c40a41967ac778a4372b9afa1e1d4a39b404369999f83e95cb7",
+        global_id="0xf516a0a20187772473930686cae725880800eb3c1cc1a369dd97f3af3fbb06d5",
+        pool_registry_table_id="0xa232533579e171deec78696dae61ae4cb4d181df9ca90da56db97cfed4774abd",
     )
 }
 
@@ -27,7 +30,8 @@ TESTNET_FAUCET = {
     "faucet_id": "0xce512917214d7e5b21b63f33ec2aebd923852bd3de27128c83f40d9a9f8bad35",
     "COIN_USDC": "0x5c68f3d2ebfd711454da300d6abf3c7254dc9333cd138cdc68e158ebffd24483::coins::USDC",
     "COIN_WSOL": "0x5c68f3d2ebfd711454da300d6abf3c7254dc9333cd138cdc68e158ebffd24483::coins::WSOL",
-    "COIN_WETH": "0x5c68f3d2ebfd711454da300d6abf3c7254dc9333cd138cdc68e158ebffd24483::coins::WETH"
+    "COIN_WETH": "0x5c68f3d2ebfd711454da300d6abf3c7254dc9333cd138cdc68e158ebffd24483::coins::WETH",
+    "COIN_CETUS": "0x5c68f3d2ebfd711454da300d6abf3c7254dc9333cd138cdc68e158ebffd24483::coins::CETUS",
 }
 
 DEFAULT_SLIPPAGE = 0.005

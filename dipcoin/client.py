@@ -1,4 +1,8 @@
+# Copyright (c) 2025 Dipcoin LLC
+# SPDX-License-Identifier: Apache-2.0
+
 """Dipcoin Python SDK"""
+import logging
 from typing import Dict, Any
 
 from pysui import PysuiConfiguration, handle_result, AsyncGqlClient
@@ -12,6 +16,14 @@ from .constants import CONTRACT_CONSTANTS, DEFAULT_SLIPPAGE
 from .math import calc_optimal_coin_values, get_amount_out, get_amount_in
 from .query import DipCoinQuery
 from .exceptions import PoolNotFound, UnreachableException
+
+# 配置日志
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+handler = logging.StreamHandler()
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
 
 class DipcoinClient:
     """A client for interacting with the Dipcoin Protocol on Sui blockchain.
@@ -33,10 +45,14 @@ class DipcoinClient:
         Args:
             network (str, optional): The network to connect to. Defaults to "testnet".
         """
-        cfg = PysuiConfiguration(group_name=PysuiConfiguration.SUI_GQL_RPC_GROUP )
-        self.client = AsyncGqlClient(pysui_config=cfg,write_schema=False)
+        if network not in ["testnet", "mainnet"]:
+            raise ValueError(f"Invalid network: {network}, must be 'testnet' or 'mainnet'")
+        cfg = PysuiConfiguration(group_name=PysuiConfiguration.SUI_GQL_RPC_GROUP, profile_name=network)
+        self.client = AsyncGqlClient(write_schema=False, pysui_config=cfg)
         self.query = DipCoinQuery(network)
         self.network = network
+        logger.info(f"Initialized Dipcoin client for network: {network}")
+        logger.info("Active address: %s", self.client.config.active_address)
 
     async def get_pool(self, pool_id: str) -> Pool | None:
         """Retrieve information about a specific liquidity pool.
@@ -51,6 +67,7 @@ class DipcoinClient:
         Raises:
             Exception: If there's an error parsing the pool data or an unknown error occurs.
         """
+        logger.info(f"Getting pool info for pool_id: {pool_id}")
         qres = await self.client.execute_query_node(
             with_node=qn.GetObject(
                 object_id=pool_id
@@ -59,12 +76,17 @@ class DipcoinClient:
         res = handle_result(qres)
         if isinstance(res, ObjectReadGQL):
             try:
-                return Pool.from_gql_response(res.content)
-            except:
+                pool = Pool.from_gql_response(res.content)
+                logger.info(f"Successfully retrieved pool info for {pool_id}")
+                return pool
+            except Exception as e:
+                logger.error(f"Error parsing pool data: {str(e)}")
                 raise UnreachableException(f"Unknown error: {res}")
         elif isinstance(res, NoopGQL):
+            logger.warning(f"Pool not found for pool_id: {pool_id}")
             return None
         else:
+            logger.error(f"Unknown response type for pool_id: {pool_id}")
             raise UnreachableException(f"Unknown error: {res}")
         
     async def get_pool_id(self, coin_x_type: str, coin_y_type: str) -> str | None:
@@ -103,6 +125,7 @@ class DipcoinClient:
         Returns:
             TransactionResponse: A TransactionResponse object containing the transaction digest and status
         """
+        logger.info(f"Adding liquidity: {coin_x_type} ({coin_x_amount}) and {coin_y_type} ({coin_y_amount}) with slippage {slippage}")
         try:
             # Ensure correct order of typeX and typeY
             new_type_x, new_type_y = sort_type(coin_x_type, coin_y_type)
@@ -112,20 +135,27 @@ class DipcoinClient:
             
             if is_change:
                 coin_x_amount, coin_y_amount = coin_y_amount, coin_x_amount
+                logger.debug(f"Swapped coin types and amounts due to sorting")
 
             # Validate input amounts
             if coin_x_amount <= 0 or coin_y_amount <= 0:
+                logger.error("Amount must be greater than 0")
                 raise ValueError("Amount must be greater than 0")
             if slippage >= 1.0 or slippage < 0.0:
+                logger.error(f"Invalid slippage value: {slippage}")
                 raise ValueError(r"Slippage must be less than 100% and greater than 0%")
 
             # Get pool information
             pool_id = await self.query.get_pool_id(coin_x_type, coin_y_type)
             if not pool_id:
+                logger.error(f"Pool not found for {coin_x_type} and {coin_y_type}")
                 raise PoolNotFound(coin_x_type, coin_y_type)
             pool = await self.get_pool(pool_id)
             if not pool:
+                logger.error(f"Failed to get pool info for {pool_id}")
                 raise PoolNotFound(coin_x_type, coin_y_type)
+
+            logger.info(f"Found pool {pool_id} with balances: X={pool.bal_x}, Y={pool.bal_y}")
 
             # Calculate optimal amounts
             coin_x_desired, coin_y_desired = calc_optimal_coin_values(
@@ -137,6 +167,8 @@ class DipcoinClient:
             # Calculate minimum accepted amounts (considering slippage)
             coin_x_min = int(coin_x_desired * (1.0 - slippage))
             coin_y_min = int(coin_y_desired * (1.0 - slippage))
+            logger.info(f"Desired coin values: X={coin_x_desired}, Y={coin_y_desired}")
+            logger.info(f"Minimum accepted amounts: X={coin_x_min}, Y={coin_y_min}")
 
             # Create transaction
             txn = SuiTransaction(client=self.client)
@@ -161,7 +193,6 @@ class DipcoinClient:
             await txn.move_call(
                 target=f"{CONTRACT_CONSTANTS[self.network].package_id}::router::add_liquidity",
                 arguments=[
-                    CONTRACT_CONSTANTS[self.network].version_id,
                     CONTRACT_CONSTANTS[self.network].global_id,
                     pool_id,
                     split_coin_x,
@@ -189,7 +220,7 @@ class DipcoinClient:
             return TransactionResponse(
                 digest="",
                 status=False,
-                error=str(e)
+                error=f"Unexpected error: {str(e)}"
             )
 
     async def remove_liquidity(
@@ -214,14 +245,17 @@ class DipcoinClient:
         Returns:
             TransactionResponse: A TransactionResponse object containing the transaction digest and status
         """
+        logger.info(f"Removing liquidity: {lp_amount} LP tokens for {coin_x_type} and {coin_y_type} with slippage {slippage}")
         try:
             if lp_amount <= 0:
+                logger.error("LP amount must be greater than 0")
                 raise ValueError("Amount must be greater than 0")
             if slippage >= 1.0 or slippage < 0.0:
+                logger.error(f"Invalid slippage value: {slippage}")
                 raise ValueError(r"Slippage must be less than 100% and greater than 0%")
             
             coin_x_type, coin_y_type, lp_type = sort_and_get_lp_type(
-                CONTRACT_CONSTANTS[self.network].package_id,
+                CONTRACT_CONSTANTS[self.network].initial_package_id,
                 coin_x_type,
                 coin_y_type
             )
@@ -254,7 +288,6 @@ class DipcoinClient:
             await txn.move_call(
                 target=f"{CONTRACT_CONSTANTS[self.network].package_id}::router::remove_liquidity",
                 arguments=[
-                    CONTRACT_CONSTANTS[self.network].version_id,
                     CONTRACT_CONSTANTS[self.network].global_id,
                     pool_id,
                     split_lp_coin,
@@ -297,10 +330,13 @@ class DipcoinClient:
         Returns:
             TransactionResponse: A TransactionResponse object containing the transaction digest and status
         """
+        logger.info(f"Swapping exact in: {amount_in} {coin_in_type} for {coin_out_type} with slippage {slippage}")
         try:
             if amount_in <= 0:
+                logger.error("Input amount must be greater than 0")
                 raise ValueError("Amount must be greater than 0")
             if slippage >= 1.0 or slippage < 0.0:
+                logger.error(f"Invalid slippage value: {slippage}")
                 raise ValueError("Slippage must be less than 100% and greater than 0%")
             
             pool_id = await self.query.get_pool_id(coin_in_type, coin_out_type)
@@ -347,7 +383,6 @@ class DipcoinClient:
             await txn.move_call(
                 target=target,
                 arguments=[
-                    CONTRACT_CONSTANTS[self.network].version_id,
                     CONTRACT_CONSTANTS[self.network].global_id,
                     pool_id,
                     split_coin_in,
@@ -389,10 +424,13 @@ class DipcoinClient:
         Returns:
             TransactionResponse: A TransactionResponse object containing the transaction digest and status
         """
+        logger.info(f"Swapping exact out: {coin_in_type} for {amount_out} {coin_out_type} with slippage {slippage}")
         try:
             if amount_out <= 0:
+                logger.error("Output amount must be greater than 0")
                 raise ValueError("Amount must be greater than 0")
             if slippage >= 1.0 or slippage < 0.0:
+                logger.error(f"Invalid slippage value: {slippage}")
                 raise ValueError(r"Slippage must be less than 100% and greater than 0%")
 
             # Get pool info
@@ -436,7 +474,6 @@ class DipcoinClient:
             await txn.move_call(
                 target=target,
                 arguments=[
-                    CONTRACT_CONSTANTS[self.network].version_id,
                     CONTRACT_CONSTANTS[self.network].global_id,
                     pool_id,
                     split_coin_in,
@@ -457,19 +494,22 @@ class DipcoinClient:
         
     async def _execute_and_wait(self, txn: SuiTransaction) -> TransactionResponse:
         """Execute transaction and wait for it to be processed"""
+        logger.info("Executing transaction")
         tx_data = await txn.build_and_sign()
         tx_result = await txn.client.execute_query_node(
             with_node=qn.ExecuteTransaction(**tx_data)
         )
         if tx_result.is_err():
+            logger.error(f"Transaction execution failed: {tx_result.result_string}")
             return TransactionResponse(
                 digest="",
                 status=False,
-                error=tx_result.result_string
+                error=f"ExecuteTransaction error: {tx_result.result_string}"
             )
         tx_result = handle_result(tx_result)
         assert tx_result.status == 'SUCCESS', tx_result.status
-        await self.client.wait_for_transaction(digest=tx_result.digest) # TODO: check effects
+        logger.info(f"Transaction executed successfully with digest: {tx_result.digest}")
+        await self.client.wait_for_transaction(digest=tx_result.digest)
         return TransactionResponse(
             digest=tx_result.digest,
             status=True

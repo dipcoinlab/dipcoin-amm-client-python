@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Dipcoin LLC
+# SPDX-License-Identifier: Apache-2.0
+
 class PoolNotFound(Exception):
     """Exception raised when a liquidity pool cannot be found.
     
